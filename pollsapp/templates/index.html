@@ -1,0 +1,16 @@
+{% extends 'base.html' %}
+
+{% block content %}
+ 
+<h3 class="text-center mb-3 mt-3"><strong>Polling Capres dan Cawapres 2024</strong></h3>
+
+<div class="list-group mt-3 mb-5 m-5">
+    {% for question in questions %}
+
+    <a href="{% url 'vote' question.id %}" class="list-group-item list-group-item-action">{{ question.question }}</li></a>
+    
+    {% endfor %}
+</div>
+
+{% endblock content %}
+    
